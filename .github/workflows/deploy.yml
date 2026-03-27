@@ -5,9 +5,10 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-# contents:write 供 configure-pages 在首次开启 Pages（enablement）时使用
+# 勿使用 configure-pages 的 enablement：默认 GITHUB_TOKEN 无「代你创建 Pages」权限，会报 Resource not accessible by integration。
+# 请先在仓库 Settings → Pages 里把 Source 设为 GitHub Actions，再跑本 workflow。
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -30,9 +31,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          # 仓库若尚未在 Settings → Pages 里启用，首次需自动开启（否则会 404 Not Found）
-          enablement: true
 
       - name: Install dependencies
         run: npm ci
