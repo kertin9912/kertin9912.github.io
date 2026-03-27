@@ -5,8 +5,8 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-# 勿使用 configure-pages 的 enablement：默认 GITHUB_TOKEN 无「代你创建 Pages」权限，会报 Resource not accessible by integration。
-# 请先在仓库 Settings → Pages 里把 Source 设为 GitHub Actions，再跑本 workflow。
+# 未使用 configure-pages：该 action 会 GET Pages 站点；在仓库尚未启用 Pages 时会 404。
+# 本项目 next.config 已含 export / unoptimized，无需其注入。部署前仍须在 Settings → Pages 将 Source 设为 GitHub Actions。
 permissions:
   contents: read
   pages: write
@@ -28,9 +28,6 @@ jobs:
         with:
           node-version: 22
           cache: npm
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci
