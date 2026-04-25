@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const RESUME_HREF = {
-  cn: "/gejin1999.pdf",
+  cn: "/gejin-2y-frontend.pdf",
   en: "/kertin.pdf",
 } as const;
 
