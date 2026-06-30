@@ -790,7 +790,7 @@ const App = () => {
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.25rem" }}>
                     <h4 style={{ fontWeight: 700, color: textMain, fontSize: "0.875rem" }}>{t.exp_job1_title}</h4>
-                    <span style={{ fontSize: "0.625rem", fontFamily: "Fira Code, monospace", color: "#3b82f6", background: "rgba(59,130,246,0.1)", padding: "0.125rem 0.375rem", borderRadius: "0.25rem" }}>2024 - Present</span>
+                    <span style={{ fontSize: "0.625rem", fontFamily: "Fira Code, monospace", color: "#3b82f6", background: "rgba(59,130,246,0.1)", padding: "0.125rem 0.375rem", borderRadius: "0.25rem" }}>2024 - 2026</span>
                   </div>
                   <p style={{ fontSize: "0.75rem", color: textMuted, marginBottom: "0.5rem", fontFamily: "Fira Code, monospace" }}>@ Meituan</p>
                   <p style={{ fontSize: "0.75rem", color: textMuted, lineHeight: 1.6 }}>{t.exp_job1_desc}</p>
